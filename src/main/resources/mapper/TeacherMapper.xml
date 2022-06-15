@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xd.usercenter.mapper.TeacherMapper">
+
+    <resultMap id="BaseResultMap" type="com.xd.usercenter.model.domain.Teacher">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="deleted_at" column="deleted_at" jdbcType="TIMESTAMP"/>
+            <result property="teacherName" column="teacherName" jdbcType="VARCHAR"/>
+            <result property="sex" column="sex" jdbcType="VARCHAR"/>
+            <result property="age" column="age" jdbcType="BIGINT"/>
+            <result property="teacherLevel" column="teacherLevel" jdbcType="VARCHAR"/>
+            <result property="collage" column="collage" jdbcType="VARCHAR"/>
+            <result property="tel" column="tel" jdbcType="VARCHAR"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,createTime,updateTime,
+        deleted_at,teacherName,sex,
+        age,teacherLevel,collage,
+        tel,isDelete
+    </sql>
+</mapper>

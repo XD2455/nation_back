@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xd.usercenter.mapper.CourseMapper">
+
+    <resultMap id="BaseResultMap" type="com.xd.usercenter.model.domain.Course">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="deleteTime" column="deleteTime" jdbcType="TIMESTAMP"/>
+            <result property="cid" column="cid" jdbcType="VARCHAR"/>
+            <result property="collage" column="collage" jdbcType="VARCHAR"/>
+            <result property="course" column="course" jdbcType="VARCHAR"/>
+            <result property="cData" column="cData" jdbcType="VARCHAR"/>
+            <result property="extra" column="extra" jdbcType="VARCHAR"/>
+            <result property="counts" column="counts" jdbcType="BIGINT"/>
+            <result property="stuId" column="stuId" jdbcType="VARCHAR"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="teaId" column="teaId" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,createTime,updateTime,
+        deleteTime,cid,collage,
+        course,cData,extra,
+        counts,stuId,isDelete,
+        teaId
+    </sql>
+</mapper>
